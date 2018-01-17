@@ -3,7 +3,7 @@ console.log(1);
 var currentIndex = 0;
 var phaseData = [];
 
-function onSucessfulLoad(data) {
+function onSuccess(data) {
   console.log('success');
   phaseData = data.phasedata;
   // let nextPhase = data.phasedata[0];
@@ -24,7 +24,7 @@ function onHappyClick() {
 
 console.log(3)
 let DATE = 'today';
-jQuery.getJSON(`http://api.usno.navy.mil/moon/phase?date=${DATE}&nump=30`, onSucessfulLoad);
+jQuery.getJSON(`http://api.usno.navy.mil/moon/phase?date=${DATE}&nump=30`, onSuccess);
 console.log(4);
 
 document.getElementById("nextButton").addEventListener("click", onHappyClick);
